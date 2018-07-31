@@ -5,32 +5,101 @@
 #lsize {
   width: 250px;
   height: 80px;
+  margin-left: 50px;
 }
 .msize {
   width:300px;
   height:200px;
 }
-header {
-  text-align: center;
-  background-color: lightgreen;
-}
-nav {
-  background-color: #F5F8A1;
-
-}
-a:hover {
-  background-color: lightgreen;
-}
-#dropdown:hover {
-
-}
-.top {
-  text-align: center;
-}
-h1 {
+.heading {
   text-decoration: underline;
   text-align: center;
-  font-size: 40px;
-  color: lightblue;
-  margin: 30px 0 50px 0;
+  font-size: 50px;
+  color: #9CFF33;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+header {                  /*Top-left logo */
+  display: inline-flex;
+  width: 50%;
+  background-color: #F5F8A1;
+}
+nav {                     /*Top-right option bars*/
+  display: flex;
+  width: 50%;
+  float: right;
+  background-color: #F5F8A1;
+  justify-content:flex-end;
+}
+.opt {                    /*Styling option bars*/
+  border: 1px solid red;
+  padding: 28px 40px;
+  font-size: 22px;
+}
+nav > a:hover{
+  background-color: lightgreen;
+}
+.dropdown {               /*dropdown lists for the menu bar*/
+  position: relative;
+  display: flex;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+.dropdown-content a {   /*seprate links inside dropdown*/
+  color: black;
+  padding: 12px 30px;
+  text-decoration:none;
+  display: block;
+  border: 1px lightblue solid;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+  margin-top: 85px;
+  display: block;
+}
+/*intro banner*/
+.top {
+  text-align: center;
+  background-color: lightpink
+}
+/* New models*/
+.mid {
+  text-align: center;
+  background-color: #FF9033;
+}
+.mid > section {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+section > p {
+  padding: 20px;
+  border: 1px lightpink solid;
+  border-radius: 15px;
+  margin-left: 15px;
+}
+/*Order steps*/
+.bot {
+  background-color: #33DAFF;
+}
+#steps {
+  border: 3px red solid;
+  width: 450px;
+  font-size: 45px;
+  border-radius: 50%;
+  text-align: center;
+}
+.bot > section > h1{
+  font-size: 35px;
+  margin-left: 30px;
+}
+footer {
+  background-color: lightgray;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid red;
 }
