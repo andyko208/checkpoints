@@ -1,21 +1,24 @@
-#tsize {
+.tsize {              /*intro pic size*/
   width:700px;
   height:400px;
 }
-#lsize {
+#gone {
+  display: none;
+}
+#lsize {               /*logo size*/
   width: 250px;
   height: 80px;
   margin-left: 50px;
 }
-.msize {
+.msize {                /*mid sect img*/
   width:300px;
   height:200px;
 }
-.bsize {
+.bsize {                /*bottom sect img*/
   width:200px;
   height:170px;
 }
-.heading {
+.heading {               /*headings of each sect*/
   text-decoration: underline;
   text-align: center;
   font-size: 50px;
@@ -74,6 +77,22 @@ nav > a:hover , .dropdown > a:hover{
   background-color: #F5CBA7;
   padding-bottom: 90px;
 }
+.lad{
+  float: left;
+}
+.ad1 {
+  padding:80px 30px;
+}
+.rad{
+  float: right;
+}
+.ad2 {
+  padding: 80px 30px;
+}
+button {
+  border-radius: 50%;
+  border-style: none;
+}
 /* New models*/
 .mid {
   text-align: center;
@@ -113,7 +132,6 @@ section > p {
   font-size: 25px;
   display: inline-block;
   margin-right: 30px;
-
 }
 footer {
   background-color: lightgray;
