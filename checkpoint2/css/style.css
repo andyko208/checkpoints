@@ -7,8 +7,6 @@ nav {
   align-items: center;
 }
 .logo a {
-  color: black;
-  text-decoration: none;
 
 }
 .bar {
@@ -28,16 +26,22 @@ main {
   justify-content: center;
   align-items: center;
 }
-main h1 {
+.intro h1 {
   text-align: center;
   font-size: 3.5em;
   font-family: 'Oswald', sans-serif;
   color: white;
 }
-main .bars {
-  flex-direction: row;
+.bars {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
 }
-/* .container{
+/* .mid-container {
+  display: grid;
+  height:500px;
+} */
+.container{
   display: grid;
   height: 250px;
   grid-auto-rows: minmax(100px, auto);
@@ -71,4 +75,4 @@ img {
 }
 .box4{
   grid-area: box4;
-} */
+}
