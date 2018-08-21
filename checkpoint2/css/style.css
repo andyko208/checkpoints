@@ -37,6 +37,20 @@ main {
   margin-top: 20px;
   justify-content: space-around;
 }
+.bars a {
+  text-decoration: none;
+}
+.bars a h4:hover {
+  background-color: lightpink;
+}
+.bars a h4 {
+  font-size: 1.2em;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: skyblue;
+}
 .container {
   display: grid;
   padding: 50px;
@@ -116,18 +130,67 @@ main {
   width: 450px;
   height: 550px;
 }
+.bot-container {
+  height: 550px;
+  display: flex;
+  background-color: lightgreen;
+  justify-content: center;
+  align-items: center;
+}
 .seesaw {
+  display: grid;
+  grid-auto-rows: (100px, auto);
   margin: 0 auto;
-  width: 50%;
-  height: 50px;
+  height: 200px;
+  grid-template-areas:
+    "obj"
+    "swing"
+    "lever";
+}
+.obj{
+  display: flex;
+  justify-content: space-between;
+}
+.obj1 {
+  width: 80px;
+  height: 80px;
   border: 1px solid black;
+  transition: transform 500ms ease-in-out;
+  pointer-events:none;
+}
+.obj2 {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  transition: transform 500ms ease-in-out;
+  pointer-events:none;
 }
 .swing {
-  background-color: yellow;
+  width: 500px;
+  height: 50px;
+  background-color: #F5CBA7;
   transition: transform 500ms ease-in-out;
   pointer-events: none;
 }
+.lever {
+  margin: 0 auto;
 
+}
+.tri {
+  margin-top: -60px;
+  width: 0;
+  height: 0;
+  border: solid 60px;
+  border-color: transparent transparent orange transparent;
+}
+.seesaw:hover .obj1 {
+  transform: translate(0, 55px)
+  rotate(-15deg);
+}
+.seesaw:hover .obj2 {
+  transform: translate(-30px, -50px)
+  rotate(-15deg);
+}
 .seesaw:hover .swing{
-  transform: rotate(10deg);
+  transform: rotate(-15deg);
 }
