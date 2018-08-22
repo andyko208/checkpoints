@@ -1,17 +1,18 @@
 nav {
   display: flex;
   border: 1px solid gray;
-  background-color: #41F5AE;
+  background-color: #AED6F1;
   height: 80px;
   justify-content: space-around;
   align-items: center;
 }
-.logo a {
-
+.logo a img{
+  width: 150px;
+  height: 70px;
 }
 .bar {
   display: flex;
-  padding: 15px 25px;
+  padding: 55px 25px;
 }
 .bar a {
   color: black;
