@@ -92,9 +92,6 @@ main {
 .i1{
   grid-area: i1;
 }
-.i1 img {
-  margin: 0 auto;
-}
 .i2{
   grid-area: i2;
   display: flex;
@@ -145,19 +142,18 @@ main {
   grid-area: p3;
   display: flex;
 }
-/* size for phone imgs */
+/* size adjustments for phone imgs */
 .size {
   width: 500px;
   height: 550px;
   margin: 0 auto;
 }
-/* size for cases */
+/* size adjustments for cases */
 .adj {
   margin: auto 0;
 }
-.title h1 {
-  text-align: center;
-}
+/* down the bottom of page seesaw code */
+/* just for fun */
 .bot-container {
   height: 550px;
   display: flex;
@@ -223,11 +219,14 @@ main {
 .seesaw:hover .swing{
   transform: rotate(-15deg);
 }
+/* copyright */
 footer h1 {
   text-align: right;
   background-color: yellow;
 }
+/* media queries */
 /* desktop view */
+/* grid box for cases' format changed */
 @media (max-width: 992px){
   .i2, .i3, .g2, .g3, .p2, .p3 {
     display: grid;
@@ -276,9 +275,8 @@ footer h1 {
     height: 183px;
   }
 }
-/* media queries */
+/* mobile view */
 /* top right nav bar gone */
-/* # of phone case case images - 2 */
 /* now cases shown below the phone types */
 @media (max-width: 576px) {
   .size, .adj {
