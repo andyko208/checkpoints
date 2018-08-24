@@ -1,3 +1,4 @@
+/* top bars */
 nav {
   display: flex;
   border: 1px solid gray;
@@ -10,6 +11,7 @@ nav {
   width: 150px;
   height: 70px;
 }
+/* links to go down of a page */
 .bar {
   display: flex;
   padding: 55px 25px;
@@ -17,8 +19,12 @@ nav {
 .bar a {
   color: black;
   text-decoration: none;
-  border: 1px solid gray;
-  padding: 15px 25px;
+  border: 5px solid darkgray;
+  border-style:inset;
+  padding: 15px 35px;
+}
+.bar a:hover {
+  background-color: lightgreen;
 }
 /* intro page */
 main {
@@ -34,11 +40,13 @@ main {
   font-family: 'Oswald', sans-serif;
   color: white;
 }
-/* options to go down a page */
+/* link to down of a page */
 .bars {
   display: flex;
   margin-top: 20px;
   justify-content: space-around;
+  background-color: skyblue;
+  border-radius: 15px;
 }
 .bars a {
   text-decoration: none;
@@ -50,10 +58,10 @@ main {
   font-size: 1.2em;
   color: white;
   padding: 10px;
-  border: 1px solid white;
   border-radius: 10px;
   background-color: skyblue;
 }
+/* phone case images organized by phone models */
 .container {
   display: grid;
   padding: 50px;
@@ -68,6 +76,8 @@ main {
 .container .box1 div, .container .box2 div,
 .container .box3 div{
   background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .box1{
   grid-area: box1;
@@ -82,11 +92,16 @@ main {
 .i1{
   grid-area: i1;
 }
+.i1 img {
+  margin: 0 auto;
+}
 .i2{
   grid-area: i2;
+  display: flex;
 }
 .i3{
   grid-area: i3;
+  display: flex;
 }
 .box2{
   grid-area: box2;
@@ -103,9 +118,11 @@ main {
 }
 .g2{
   grid-area: g2;
+  display: flex;
 }
 .g3{
   grid-area: g3;
+  display: flex;
 }
 .box3 {
   grid-area: box3;
@@ -122,14 +139,21 @@ main {
 }
 .p2{
   grid-area: p2;
+  display: flex;
 }
 .p3{
   grid-area: p3;
+  display: flex;
 }
 /* size for phone imgs */
 .size {
-  width: 450px;
+  width: 500px;
   height: 550px;
+  margin: 0 auto;
+}
+/* size for cases */
+.adj {
+  margin: auto 0;
 }
 .title h1 {
   text-align: center;
@@ -203,13 +227,28 @@ footer h1 {
   text-align: right;
   background-color: yellow;
 }
+/* desktop view */
 @media (max-width: 992px){
+  .i2, .i3, .g2, .g3, .p2, .p3 {
+    display: grid;
+  }
+  .i1, .size {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .g1, .size {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .p1, .size {
+    width: 400px;
+    margin: 0 auto;
+  }
   .container {
-    background-color: brown;
-    padding: 50px 10px;
+    background-color: lightsalmon;
+    padding: 50px 5px;
   }
   .container .box1 {
-    width: 100%;
     grid-template-columns: 3fr 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
@@ -219,7 +258,6 @@ footer h1 {
     height: 183px;
   }
   .container .box2 {
-    width: 100%;
     grid-template-columns: 3fr 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
@@ -229,7 +267,6 @@ footer h1 {
     height: 183px;
   }
   .container .box3 {
-    width: 100%;
     grid-template-columns: 3fr 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
@@ -244,6 +281,12 @@ footer h1 {
 /* # of phone case case images - 2 */
 /* now cases shown below the phone types */
 @media (max-width: 576px) {
+  .size, .adj {
+    margin: 0;
+  }
+  .size {
+    width: 300px;
+  }
   .logo a img{
     width: 120px;
   }
@@ -252,6 +295,7 @@ footer h1 {
   }
   .container {
     display: block;
+    margin: 0;
     padding: 40px 0;
     background-color: lightpink;
   }
@@ -275,14 +319,14 @@ footer h1 {
     flex-direction: column;
     align-items: center;
   }
-  .box1 .i2 .gone, .i3 .gone {
-    display: none;
+  .box1 .i2 img, .i3 img{
+    width: 130px;
   }
-  .box2 .g2 .gone, .g3 .gone {
-    display: none;
+  .box2 .g2 img, .g3 img{
+    width: 130px;
   }
-  .box3 .p2 .gone, .p3 .gone {
-    display: none;
+  .box3 .p2 img, .p3 img{
+    width: 130px;
   }
   .container .box1 div, .box2 div, .box3 div{
     display: flex;
