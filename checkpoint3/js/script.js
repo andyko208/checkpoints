@@ -1,5 +1,5 @@
 var data = {
-  totalRevs:360,
+  totalRevs:0,
   totalCurrent:0,
   totalRPS: 0
 };
@@ -9,7 +9,8 @@ setInterval(goGo,1000);
 function goGo() {
   data.totalRevs += data.totalRPS;
   data.totalCurrent += data.totalRPS;
-  $("#wheel").css({ 'transform': 'rotate(' + data.totalRevs + 'deg)'});
+  // $("#wheel").css({ 'transform': 'rotate(' + data.totalRevs + 'deg)'});
+  $("#wheel").css({ 'transform': 'translate(' + -data.totalRevs + 'px)'});
   updateReport();
 }
 
@@ -20,8 +21,8 @@ function updateReport() {
 
 
 $("#wheel").click(function (){
-  data.totalRevs ++;
-  data.totalCurrent ++;
+  data.totalRevs++;
+  data.totalCurrent++;
   updateReport();
 })
 
