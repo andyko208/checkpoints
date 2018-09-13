@@ -5,12 +5,15 @@ var data = {
 };
 
 setInterval(goGo,1000);
+// while (data.totalRevs > 0 || data.totalRevs < 0) {
+//   touches();
+// }
 
 function goGo() {
   data.totalRevs += data.totalRPS;
   data.totalCurrent += data.totalRPS;
-  // $("#wheel").css({ 'transform': 'rotate(' + data.totalRevs + 'deg)'});
-  $("#wheel").css({ 'transform': 'translate(' + -data.totalRevs + 'px)'});
+  // $(".horse").css({ 'transform': 'rotate(' + data.totalRevs + 'deg)'});
+  $(".horse").css({ 'transform': 'translate(' + -data.totalRevs/4 + 'px)'});
   updateReport();
 }
 
@@ -19,11 +22,33 @@ function updateReport() {
   $("#rps").text((data.totalRPS/70.4).toFixed(3));
 }
 
+function touches() {
+  var goal = $("#goal").position().left;
+  console.log('goal', goal);
+  var horse = $(".horse").position().left;
+  console.log('horse', horse);
+  if (horse <= goal) {
+    console.log('reset');
+    // $(".horse").css({ 'transform': 'translate(' + 724 + 'px)'});
+    // $(".horse").css({'display': 'none'})
+    $(".horse").remove()
+ // create a ne element
+ // append it
+     // data = {
+     //   totalRevs:0,
+     //   totalCurrent:0,
+     //   totalRPS: 0
+     // };
+    let newHorse = $('<img src="./img/horse.jpeg"  class="horse">')
+    $('.flexbox').append(newHorse)
+  }
+}
 
-$("#wheel").click(function (){
+$(".horse").click(function (){
   data.totalRevs++;
   data.totalCurrent++;
   updateReport();
+  touches();
 })
 
 $(".button").click(function (){

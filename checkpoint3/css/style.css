@@ -1,16 +1,40 @@
-#wheel {
+body {
+  background-color: skyblue;
+}
+.horse {     /*if .horse reaches #goal, return its position back to origin*/
+  float: right;
+  left: 150px;
   width:200px;
   height:200px;
   background-color: brown;
   border-radius:150px;
+  cursor:pointer;
 }
-
-img {
+.resetHorse {
   float: right;
+  left: 150px !important;
+  width:200px;
+  height:200px;
+  background-color: brown;
+  border-radius:150px;
+  cursor:pointer;
+}
+#goal {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+img {
   transition: all 3s;
   transition-timing-function: linear;
 }
-.backi {
+h1, .interface {
+  text-align: center;
+}
+.flexbox {
+  margin-bottom: -150px;
+}
+.eventArea {            /*green field area*/
   margin-top: 50px;
   width: 100%;
   height: 200px;
@@ -33,13 +57,23 @@ img {
 #currentTotal {
   margin: 0 auto;
   margin-top: 100px;
+  background-color: lightgreen;
+}
+.clicks {              /*option bars when enough clicked*/
+  display: flex;
+  background-color: beige;
 }
 .button {
   margin: 0 auto;
-  width:150px;
-  height:20px;
-  border:1px solid black;
-  border-radius:25px;
-  text-align: center;
+  padding: 0 10px;
+  width:250px;
+  height:80px;
+  border-style: outset;
   cursor:pointer;
+  background-color:lightpink;
+}
+.adjust {          /*adjusting option pictures sizes*/
+  width: 100px;
+  height: 50px;
+  margin-top: 15px;
 }
