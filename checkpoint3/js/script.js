@@ -11,7 +11,7 @@ setInterval(itsMoving, 1000);
 function goGo() {           /*horse moves*/
   data.totalRevs += data.totalRPS;
   data.totalCurrent += data.totalRPS;
-  var speed = data.totalRevs / -4; /*change to data.totalRevs * 100 to see it go faster*/
+  var speed = data.totalRevs * -100; /*change to data.totalRevs * 100 to see it go faster*/
   $(".horse").css({ 'transform': 'translate(' + speed + 'px)'});
   updateReport();
 }
